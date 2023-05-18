@@ -26,13 +26,11 @@ namespace NumberGuessingGame
                 }
                 else
                 {
+                    // Keep track of the number of guesses and the current user guess
                     if (userGuessNumber == -1)
                     {
                         keepPlaying = false;
                     }
-                    // Keep track of the number of guesses and the current user guess
-                    // Start the game and run until user quits or guesses correctly
-                    // HINT: You'll need a way to convert the user's input to an integer
                 }
             } while (keepPlaying);
         }
