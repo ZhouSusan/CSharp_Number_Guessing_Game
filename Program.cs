@@ -17,14 +17,23 @@ namespace NumberGuessingGame
             Console.WriteLine("Enter your guess, or -1 to give up like a human, purr.");
             do
             {
-               Console.WriteLine("Hmmm, that doesn't look like a number. Try again or you can ask woofers over there to help.");
                 string theGuess = Console.ReadLine();
                 bool result = Int32.TryParse(theGuess, out userGuessNumber);
                 Console.WriteLine(theGuess);
-                // Keep track of the number of guesses and the current user guess
-
-                // Start the game and run until user quits or guesses correctly
-                // HINT: You'll need a way to convert the user's input to an integer
+                if (!result)
+                {
+                    Console.WriteLine("Hmmm, that doesn't look like a number. Try again or you can ask woofers over there to help.");
+                }
+                else
+                {
+                    if (userGuessNumber == -1)
+                    {
+                        keepPlaying = false;
+                    }
+                    // Keep track of the number of guesses and the current user guess
+                    // Start the game and run until user quits or guesses correctly
+                    // HINT: You'll need a way to convert the user's input to an integer
+                }
             } while (keepPlaying);
         }
     }
