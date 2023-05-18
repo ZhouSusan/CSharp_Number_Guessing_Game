@@ -12,12 +12,12 @@ namespace NumberGuessingGame
             int userGuessNumber = 0;
 
             // Print the game greeting and instructions
-            Console.WriteLine("Let's Play 'Guess the Number'!");
+            Console.WriteLine("Let's Play 'Guess the Number' human!");
             Console.WriteLine("I'm thinking of a number between 0 and 20.");
-            Console.WriteLine("Enter your guess, or -1 to give up.");
+            Console.WriteLine("Enter your guess, or -1 to give up like a human, purr.");
             do
             {
-               Console.WriteLine("What is your guess? ");
+               Console.WriteLine("Hmmm, that doesn't look like a number. Try again or you can ask woofers over there to help.");
                 string theGuess = Console.ReadLine();
                 bool result = Int32.TryParse(theGuess, out userGuessNumber);
                 Console.WriteLine(theGuess);
