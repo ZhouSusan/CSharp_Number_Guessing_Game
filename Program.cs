@@ -31,6 +31,14 @@ namespace NumberGuessingGame
                     {
                         keepPlaying = false;
                     }
+                    else if (userGuessNumber < theNumber)
+                    {
+                        Console.WriteLine("Purrr, too low human~ Try again =^.^=");
+                    }
+                    else if (userGuessNumber > theNumber)
+                    {
+                        Console.WriteLine("Purrr, too high human~ Try again =^.^=");
+                    }
                 }
             } while (keepPlaying);
         }
