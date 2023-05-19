@@ -28,6 +28,7 @@ namespace NumberGuessingGame
                 }
                 else
                 {
+                    guessCounts++;
                     if (userGuessNumber == -1)
                     {
                         keepPlaying = false;
@@ -41,13 +42,14 @@ namespace NumberGuessingGame
                         Console.WriteLine("Purrr, too high human~ Try again =^.^=");
                     } else
                     {
-                        Console.WriteLine($"You got it in {guessCounts+1} guesses!!");
+                        Console.WriteLine($"You got it in {guessCounts} guesses!!");
                         keepPlaying = false;
                     }
 
-                    guessCounts++;
                 }
             } while (keepPlaying);
+            string mouseCost = guessCounts == 1 ? "1 mouse!" : $"{guessCounts} mice!";
+            Console.WriteLine($"Thank you for playing, that will be {mouseCost}");
         }
     }
 }
