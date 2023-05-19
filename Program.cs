@@ -32,6 +32,7 @@ namespace NumberGuessingGame
                     if (userGuessNumber == -1)
                     {
                         keepPlaying = false;
+                        Console.WriteLine($"Hmm...Looks like the number was {theNumber}. Better luck next time!");
                     }
                     else if (userGuessNumber < theNumber)
                     {
